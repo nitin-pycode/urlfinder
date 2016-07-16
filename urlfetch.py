@@ -10,7 +10,7 @@ def fetchit():
     r=requests.get(url2)
     data=r.text
     soup=BeautifulSoup(data)
-    fo = open("D:/fileurl.txt", "w")
+    fo = open("fileurl.txt", "w")
     for link in soup.find_all('a'):
             global tup
             tup=(str(link.get('href')))
